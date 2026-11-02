@@ -2,225 +2,343 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    <meta name="description" content="Fatih Murat Coşkun - IT Manager and Software Developer with 10+ years of experience in IT operations, systems, networks and software.">
+    <title>Fatih Murat Coşkun | IT Manager &amp; Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header>
-        <a href="#" class="logo">FMC SOFTWARE</a>
-        <div class="toggle" onclick="toggleMenu();"></div>
-        <ul class="menu">
-            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
-            <li><a href="#about" onclick="toggleMenu();">About</a></li>
-            <li><a href="#services" onclick="toggleMenu();">Services</a></li>
-            <li><a href="#work" onclick="toggleMenu();">Work</a></li>
-            <li><a href="#testimonial" onclick="toggleMenu();">Testimonial</a></li>
-            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
-        </ul>
+        <a href="#home" class="logo"><span class="logoMark">FMC</span> Fatih Murat Coşkun</a>
+        <button class="toggle" type="button" aria-label="Toggle menu" onclick="toggleMenu();">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav>
+            <ul class="menu">
+                <li><a href="#about" onclick="closeMenu();">About</a></li>
+                <li><a href="#experience" onclick="closeMenu();">Experience</a></li>
+                <li><a href="#skills" onclick="closeMenu();">Skills</a></li>
+                <li><a href="#projects" onclick="closeMenu();">Projects</a></li>
+                <li><a href="#contact" onclick="closeMenu();" class="navCta">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="banner" id="home">
-        <div class="textBx">
-            <h2>Hello, I'm<br><span> Fatih Murat</span></h2>
-            <h3>I'm a Front End Developer.</h3>
-            <a href="#about" class="btn">About Me</a>
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="heroText">
+            <p class="eyebrow">IT Manager &amp; Software Developer</p>
+            <h1>Fatih Murat <span>Coşkun</span></h1>
+            <p class="lead">10+ years bridging IT operations, systems and software with real business
+            workflows. Today I lead IT and claims operations at <strong>Doraglass</strong> in Aksaray,
+            keeping servers, networks and data running across branches.</p>
+            <div class="heroBtns">
+                <a href="#contact" class="btn">Get in Touch</a>
+                <a href="https://www.linkedin.com/in/fmcoskun/" target="_blank" rel="noopener" class="btn ghost">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+            <ul class="stats">
+                <li><strong>10+</strong><span>years in IT &amp; operations</span></li>
+                <li><strong>6</strong><span>years as IT Manager</span></li>
+                <li><strong>4</strong><span>languages</span></li>
+            </ul>
+        </div>
+        <div class="heroImg">
+            <img src="images/2.jpg" alt="Portrait of Fatih Murat Coşkun">
         </div>
     </section>
 
+    <!-- About -->
     <section class="about" id="about">
         <div class="heading">
-            <h2>About Me</h2>
+            <p class="eyebrow">About Me</p>
+            <h2>Technology that keeps the business moving</h2>
         </div>
-        <div class="content">
-            <div class="contentBx w50">
-                <h3>I'm a Front End Web Developer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Eaque pariatur sit ipsum eius rem, voluptate quibusdam ratione 
-                tempore illo sunt nam ab, mollitia voluptatibus vitae, neque aperiam?
-                Vitae accusantium voluptatum rem eveniet! Dolor cumque quia 
-                itaque voluptatem error rerum quam?<br><br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Eaque pariatur sit ipsum eius rem, voluptate quibusdam ratione 
-                tempore illo sunt nam ab, mollitia voluptatibus vitae, neque aperiam?
-                Vitae accusantium voluptatum rem eveniet! Dolor cumque quia 
-                itaque voluptatem error rerum quam?
-                </p>
+        <div class="aboutGrid">
+            <div class="aboutImg reveal">
+                <img src="images/1.jpg" alt="Fatih Murat Coşkun reviewing system data on a large display">
             </div>
-            <div class="w50">
-                <img src="images/img1.png">
-            </div>
-        </div>
-    </section>
-
-    <section class="services" id="services">
-        <div class="heading white">
-            <h2>Our Services</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="content">
-            <div class="servicesBx">
-                <img src="images/icon1.svg">
-                <h2>Web Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt at magni doloribus odit autem temporibus,
-                alias veniam eum optio repellat!</p>
-            </div>
-            <div class="servicesBx">
-                <img src="images/icon2.svg">
-                <h2>Web Development</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt at magni doloribus odit autem temporibus,
-                alias veniam eum optio repellat!</p>
-            </div>
-            <div class="servicesBx">
-                <img src="images/icon3.svg">
-                <h2>Android App</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt at magni doloribus odit autem temporibus,
-                alias veniam eum optio repellat!</p>
-            </div>
-            <div class="servicesBx">
-                <img src="images/icon4.svg">
-                <h2>Photography</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt at magni doloribus odit autem temporibus,
-                alias veniam eum optio repellat!</p>
-            </div>
-            <div class="servicesBx">
-                <img src="images/icon5.svg">
-                <h2>Content Writing</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt at magni doloribus odit autem temporibus,
-                alias veniam eum optio repellat!</p>
-            </div>
-            <div class="servicesBx">
-                <img src="images/icon6.svg">
-                <h2>Video Editing</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt at magni doloribus odit autem temporibus,
-                alias veniam eum optio repellat!</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="work" id="work">
-        <div class="heading">
-            <h2>Our Latest Work</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, in.</p>
-        </div>
-        <div class="content">
-            <div class="workBx">
-                <img src="images/img2.jpg">
-            </div>
-            <div class="workBx">
-                <img src="images/img3.jpg">
-            </div>
-            <div class="workBx">
-                <img src="images/img4.jpg">
-            </div>
-            <div class="workBx">
-                <img src="images/img5.jpg">
-            </div>
-        </div>
-        <div class="heading">
-            <a href="#" class="btn">View More</a>
-        </div>
-    </section>
-
-    <section class="testimonial" id="testimonial">
-        <div class="heading">
-            <h2>Testimonial</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, in.</p>
-        </div>
-        <div class="content">
-            <div class="testimonialBx">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tenetur vero incidunt commodi quasi aspernatur suscipit rerum,
-                asperiores minus dolor excepturi labore unde, in ullam quis
-                reiciendis, deserunt molestias omnis exercitationem fuga
-                doloribus placeat voluptates neque?</p>
-                <h3>Someone Famous<br><span>Creative Designer</span></h3>
-            </div>
-            <div class="testimonialBx">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tenetur vero incidunt commodi quasi aspernatur suscipit rerum,
-                asperiores minus dolor excepturi labore unde, in ullam quis
-                reiciendis, deserunt molestias omnis exercitationem fuga
-                doloribus placeat voluptates neque?</p>
-                <h3>Someone Famous<br><span>Creative Designer</span></h3>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="heading white">
-            <h2>Contact Us</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="content">
-            <div class="contactInfo">
-                <h3>Contanct Info</h3>
-                <div class="contactInfoBx">
-                    <div class="box">
-                        <div class="icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Address</h3>
-                            <p>8636 New Industry,<br>Merkez,Aksaray,</br>68200</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="icon">
-                        <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Phone</h3>
-                            <p>+90-541-397-90-12</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="icon">
-                        <i class="fa-regular fa-envelope"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Email</h3>
-                            <p>fmcoskun@gmail.com</p>
-                        </div>
-                    </div>
+            <div class="aboutText reveal">
+                <p>I'm a versatile IT and operations specialist. My career started in the public
+                sector, where I spent years on IT systems, data integrity, digital archiving and
+                technical support, including temporary assignments as an information systems manager
+                and purchasing manager.</p>
+                <p>Since 2020 I've been the IT Manager and Motor Claims Operations Specialist at
+                Doraglass. I keep servers, networks and databases running across branches, and I also
+                run the automotive glass claims process, from insurer approvals and procurement through
+                to settlement.</p>
+                <p>Along the way I trained as a software developer and build web applications with
+                JavaScript, TypeScript and React. That mix of infrastructure, software and business
+                operations lets me solve problems end to end, from the server room to the user's screen.</p>
+                <div class="facts">
+                    <div><i class="fa-solid fa-location-dot"></i> Aksaray, Türkiye</div>
+                    <div><i class="fa-solid fa-language"></i> Turkish, English, Persian, Arabic</div>
+                    <div><i class="fa-solid fa-briefcase"></i> Open to collaborations</div>
                 </div>
             </div>
-            <div class="formBx">
-                <form>
-                    <h3>Message Me</h3>
-                    <input type="text" name="" placeholder="Full Name">
-                    <input type="email" name="" placeholder="Email">
-                    <textarea placeholder="Your Message"></textarea>
-                    <input type="submit" value="Send">
-                </form>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience" id="experience">
+        <div class="heading">
+            <p class="eyebrow">Experience</p>
+            <h2>Where I've worked</h2>
+        </div>
+        <div class="timeline">
+            <div class="tlItem reveal current">
+                <div class="tlDate">Sep 2020 – Present</div>
+                <div class="tlCard">
+                    <h3>IT Manager &amp; Motor Claims Operations Specialist</h3>
+                    <p class="tlOrg">Doraglass · Aksaray, Türkiye</p>
+                    <ul>
+                        <li>Run physical and virtual servers on Linux (Ubuntu) and Windows Server, keeping systems stable and online across branches.</li>
+                        <li>Configure and maintain network infrastructure and security: firewalls, routers, VPNs and IPsec tunnels.</li>
+                        <li>Manage SQL Server databases and automated backups, in line with data protection rules.</li>
+                        <li>Supervise hardware and software deployment, remote support and software licensing across the company.</li>
+                        <li>Oversee automotive glass claims from start to finish: insurer approvals, coverage checks and settlements.</li>
+                        <li>Coordinate procurement and supply for OEM and aftermarket glass, and streamline documentation and inventory/sales tracking.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tlItem reveal">
+                <div class="tlDate">May 2022 – Aug 2025</div>
+                <div class="tlCard">
+                    <h3>Software Programmer</h3>
+                    <p class="tlOrg">Udemig</p>
+                    <ul>
+                        <li>Developed web applications with HTML, CSS, Bootstrap, JavaScript and React.</li>
+                        <li>Built projects that integrate third-party APIs.</li>
+                        <li>Contributed to frontend development both individually and as part of a team, using Git, Trello, Figma and Slack.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tlItem reveal">
+                <div class="tlDate">Jan 2010 – Oct 2016</div>
+                <div class="tlCard">
+                    <h3>IT Systems &amp; Operations</h3>
+                    <p class="tlOrg">Diyanet İşleri Başkanlığı</p>
+                    <ul>
+                        <li>Managed institutional data entry, statistical records and data verification to keep data accurate and consistent.</li>
+                        <li>Oversaw digital archiving, electronic record management and regular system backups.</li>
+                        <li>Provided technical support for the local network, hardware, peripherals and internal systems.</li>
+                        <li>Updated website content and managed institutional internet services.</li>
+                    </ul>
+                    <p class="tlSub"><span class="tag">Temporary duty</span> Representative · Kazan, Tatarstan, Russia · Jun – Jul 2015</p>
+                </div>
+            </div>
+            <div class="tlItem reveal">
+                <div class="tlDate">Jun 2012 – Feb 2013</div>
+                <div class="tlCard">
+                    <h3>Purchasing Manager <span class="tag">Temporary duty</span></h3>
+                    <p class="tlOrg">T.C. Sağlık Bakanlığı · Başkale, Van</p>
+                </div>
+            </div>
+            <div class="tlItem reveal">
+                <div class="tlDate">Mar 2011 – Mar 2012</div>
+                <div class="tlCard">
+                    <h3>Information System Manager <span class="tag">Temporary duty</span></h3>
+                    <p class="tlOrg">T.C. İçişleri Bakanlığı · Başkale, Van · YKBS</p>
+                </div>
+            </div>
+            <div class="tlItem reveal">
+                <div class="tlDate">Sep 2006 – Jun 2008</div>
+                <div class="tlCard">
+                    <h3>Medical Secretary</h3>
+                    <p class="tlOrg">T.C. Sağlık Bakanlığı · Aksaray</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="copyright">
-        <p>Copyright © 2022 FMC SOFTWARE. All Right Reserved</p>
-    </div>
-<script type="text/javascript">
-    window.addEventListener('scroll', function(){
-        var header = document.querySelector('header');
-        header.classList.toggle('sticky', window.scrollY > 0);
-    });
-    
-    function toggleMenu(){
-        var menuToggle = document.querySelector('.toggle');
-        var menu = document.querySelector('.menu');
-        menuToggle.classList.toggle('active');
-        menu.classList.toggle('active');
-    }
-</script>    
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <div class="heading">
+            <p class="eyebrow">Skills</p>
+            <h2>What I work with</h2>
+        </div>
+        <div class="skillGrid">
+            <div class="skillCard reveal">
+                <i class="fa-solid fa-server"></i>
+                <h3>Systems</h3>
+                <ul class="chips">
+                    <li>Linux (Ubuntu)</li><li>Windows Server</li><li>Virtualization</li><li>Remote Support</li><li>Licensing</li>
+                </ul>
+            </div>
+            <div class="skillCard reveal">
+                <i class="fa-solid fa-network-wired"></i>
+                <h3>Network &amp; Security</h3>
+                <ul class="chips">
+                    <li>Firewalls</li><li>Routers</li><li>VPN</li><li>IPsec</li><li>Data Protection</li>
+                </ul>
+            </div>
+            <div class="skillCard reveal">
+                <i class="fa-solid fa-database"></i>
+                <h3>Data</h3>
+                <ul class="chips">
+                    <li>SQL Server</li><li>Automated Backups</li><li>Digital Archiving</li><li>Data Integrity</li>
+                </ul>
+            </div>
+            <div class="skillCard reveal">
+                <i class="fa-solid fa-code"></i>
+                <h3>Software</h3>
+                <ul class="chips">
+                    <li>HTML &amp; CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Bootstrap</li><li>Git</li><li>Figma</li>
+                </ul>
+            </div>
+            <div class="skillCard reveal">
+                <i class="fa-solid fa-file-shield"></i>
+                <h3>Operations</h3>
+                <ul class="chips">
+                    <li>Insurance &amp; Claims</li><li>Procurement</li><li>Supply Chain</li><li>Documentation Control</li><li>Process Optimization</li>
+                </ul>
+            </div>
+            <div class="skillCard reveal">
+                <i class="fa-solid fa-language"></i>
+                <h3>Languages</h3>
+                <ul class="langs">
+                    <li><span>Turkish</span><em>Native</em></li>
+                    <li><span>English</span><em>Professional working</em></li>
+                    <li><span>Persian</span><em>Professional working</em></li>
+                    <li><span>Arabic</span><em>Limited working</em></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="credGrid">
+            <div class="credCol reveal">
+                <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                <ul>
+                    <li><strong>Computer Programming</strong><span>Associate's degree · İstanbul Üniversitesi</span></li>
+                    <li><strong>Business Administration</strong><span>Anadolu Üniversitesi · 2009 – 2013</span></li>
+                    <li><strong>Medical Secretary</strong><span>Aksaray Üniversitesi · 2006 – 2009</span></li>
+                </ul>
+            </div>
+            <div class="credCol reveal">
+                <h3><i class="fa-solid fa-certificate"></i> Certifications</h3>
+                <ul>
+                    <li><strong>Software Development Training Program</strong></li>
+                    <li><strong>Yazılım Uzmanlığı</strong><span>Software Specialist</span></li>
+                    <li><strong>Robotik ve Kodlama</strong><span>Robotic Coding</span></li>
+                    <li><strong>Bilgisayar Operatörlüğü</strong><span>Computer Operator</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <div class="heading">
+            <p class="eyebrow">Projects</p>
+            <h2>Selected work</h2>
+        </div>
+
+        <h3 class="subHeading">In the field</h3>
+        <div class="projGrid">
+            <div class="projCard reveal">
+                <i class="fa-solid fa-sitemap"></i>
+                <h4>Multi-branch IT infrastructure</h4>
+                <p>Server, network and VPN/IPsec setup that connects Doraglass branches on stable,
+                secure Linux and Windows Server environments.</p>
+                <ul class="chips small"><li>Ubuntu</li><li>Windows Server</li><li>IPsec</li></ul>
+            </div>
+            <div class="projCard reveal">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h4>Backup &amp; data protection</h4>
+                <p>Automated SQL Server backup pipelines and data handling aligned with data protection
+                requirements.</p>
+                <ul class="chips small"><li>SQL Server</li><li>Backups</li><li>Compliance</li></ul>
+            </div>
+            <div class="projCard reveal">
+                <i class="fa-solid fa-car-side"></i>
+                <h4>Claims workflow optimization</h4>
+                <p>A streamlined insurance claims and documentation process, from insurer approval to
+                settlement, with inventory and sales tracking.</p>
+                <ul class="chips small"><li>Process Design</li><li>Documentation</li><li>Insurance</li></ul>
+            </div>
+        </div>
+
+        <h3 class="subHeading">On GitHub</h3>
+        <div class="projGrid">
+            <a class="projCard link reveal" href="https://github.com/fmcoskun/Hotel-Site" target="_blank" rel="noopener">
+                <i class="fa-solid fa-hotel"></i>
+                <h4>Hotel Site</h4>
+                <p>A responsive, marketing-focused hotel website template.</p>
+                <ul class="chips small"><li>HTML</li><li>CSS</li></ul>
+                <span class="more">View repo <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a class="projCard link reveal" href="https://github.com/fmcoskun/Digital-Agency-Website" target="_blank" rel="noopener">
+                <i class="fa-solid fa-bullhorn"></i>
+                <h4>Digital Agency Website</h4>
+                <p>An agency homepage built with Bootstrap 5.</p>
+                <ul class="chips small"><li>Bootstrap 5</li><li>JavaScript</li></ul>
+                <span class="more">View repo <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a class="projCard link reveal" href="https://github.com/fmcoskun/Photography-Portfolio-Website" target="_blank" rel="noopener">
+                <i class="fa-solid fa-camera"></i>
+                <h4>Photography Portfolio</h4>
+                <p>A modern, responsive portfolio website for photographers.</p>
+                <ul class="chips small"><li>HTML</li><li>CSS</li></ul>
+                <span class="more">View repo <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+        </div>
+        <div class="center">
+            <a href="https://github.com/fmcoskun" target="_blank" rel="noopener" class="btn ghost dark">
+                <i class="fa-brands fa-github"></i> All projects on GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="heading">
+            <p class="eyebrow">Contact</p>
+            <h2>Let's connect</h2>
+            <p>I'm always open to connecting and exploring collaborative opportunities. Send me a message.</p>
+        </div>
+        <div class="contactGrid">
+            <div class="contactInfo reveal">
+                <a href="mailto:fmcoskun@gmail.com" class="contactItem">
+                    <i class="fa-regular fa-envelope"></i>
+                    <div><span>Email</span>fmcoskun@gmail.com</div>
+                </a>
+                <a href="https://www.linkedin.com/in/fmcoskun/" target="_blank" rel="noopener" class="contactItem">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <div><span>LinkedIn</span>linkedin.com/in/fmcoskun</div>
+                </a>
+                <a href="https://github.com/fmcoskun" target="_blank" rel="noopener" class="contactItem">
+                    <i class="fa-brands fa-github"></i>
+                    <div><span>GitHub</span>github.com/fmcoskun</div>
+                </a>
+                <div class="contactItem">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div><span>Location</span>Aksaray, Türkiye</div>
+                </div>
+            </div>
+            <form id="contactForm" class="reveal">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© <span id="year">2026</span> Fatih Murat Coşkun</p>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/fmcoskun/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/fmcoskun" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:fmcoskun@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
